@@ -1,0 +1,22 @@
+---
+import Header from "../components/Header.astro";
+import HeroSection from "../components/HeroSection.astro";
+import RiddlesSection from "../components/RiddlesSection.astro";
+import Layout from "../layouts/Layout.astro";
+import Footer from "../components/Footer.astro";
+import Code from "../components/Code.astro";
+
+
+---
+
+<Layout title="Letter Hunt">
+    <Header />
+    <div class="w-full flex justify-center">
+        <HeroSection />
+    </div>
+    <div class="w-full flex flex-col justify-center items-center">
+        <RiddlesSection />
+        <Code />
+    </div>
+    <Footer />
+</Layout>

@@ -1,0 +1,45 @@
+---
+import { getFirstAnswer, getSecondAnswer, getThirdAnswer } from "../lib/code";
+
+const firstElement = getFirstAnswer()
+const secondElement = getSecondAnswer()
+const thirdElement = getThirdAnswer()
+
+
+---
+
+            
+<div class="w-3/4 flex flex-col items-centerjustify-center text-slate-100  text-wrap snap-center text-center ">
+    <h3 class="md:text-3xl text-2xl text-white font-semibold font tracking-wider italic mb-12">The secret message is...</h3>
+    <form class="flex flex-col 901:flex-row 901:justify-center justify-start items-center tracking-wide text-xl basis-0 font-normal gap-3">
+        <div class="flex">
+            <p>In</p>
+        
+            <input type="text"  id="code" maxlength={firstElement} autocomplete="off" class:list={[`w-24  text-center text-white font-mono outline-0 border-b-[1px] bg-transparent`,]}  /> 
+         
+            <p>'s chill, </p>
+        </div>
+        <div class="flex">
+            
+            <input type="text"  id="code" maxlength={secondElement} autocomplete="off" class="w-44 text-center text-white font-mono outline-0 border-b-[1px] bg-transparent" />
+            
+            <p>, just </p>
+        </div>
+        <div class="flex">
+            <p>like a warm dish of </p>
+        
+            <input type="text"  id="code" maxlength={thirdElement} autocomplete="off" class="w-20 text-center text-white font-mono outline-0 border-b-[1px] bg-transparent" />
+            
+        </div>
+         
+    </form>
+     
+</div>
+
+<script>
+import { readInput } from "../lib/code"
+
+    document.addEventListener('DOMContentLoaded', () => {
+        readInput('input[id="code"]')
+    })
+</script>

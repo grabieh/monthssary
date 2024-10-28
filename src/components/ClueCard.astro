@@ -1,0 +1,14 @@
+---
+const {text, title} =Astro.props
+---
+
+<div class="lg:w-72 lg:h-96 w-80 h-96 bg-white rounded-md mb-32 flex items-center justify-center">
+    <div class="lg:w-[265px] lg:h-[360px] w-[300px] h-[360px] rounded-md border-black border-2 bg-white flex flex-col justify-start items-center">
+        <div class="w-auto md:mt-4 mt-6 flex justify-center text-black font-mono font-semibold md:text-3xl text-4xl">
+            {title}       
+        </div>
+        <div class="max-w-60 text-lg font-mono text-pretty text-center mt-7" >
+            {text}
+        </div>
+    </div>
+</div>
